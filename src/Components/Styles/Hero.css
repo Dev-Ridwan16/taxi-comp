@@ -1,0 +1,12 @@
+.lists li {
+    @apply m-2 cursor-pointer hover:bg-amber-400 text-slate-100 p-4 mb-10 rounded-md
+}
+.control {
+    @apply border w-[50px] h-[50px] rounded-full hover:bg-slate-400 z-10 font-light opacity-20 hover:opacity-100
+}
+#mobileList {
+    @apply md:hidden text-left
+}
+.list {
+    @apply m-4 hover:bg-amber-400 text-slate-100 w-[100px] p-4 mb-10 rounded-md flex justify-center items-center text-justify 
+}

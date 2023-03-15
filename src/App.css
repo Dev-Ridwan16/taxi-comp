@@ -1,7 +1,7 @@
-.App {
+/* .App {
   text-align: center;
-}
-
+} */
+/* 
 .App-logo {
   height: 40vmin;
   pointer-events: none;
@@ -34,5 +34,11 @@
   }
   to {
     transform: rotate(360deg);
-  }
-}
+  } */
+/* }
+
+
+.slideImg {
+  transition: opacity 1s ease-in-out;
+  transform: translateX(0%);
+} */
