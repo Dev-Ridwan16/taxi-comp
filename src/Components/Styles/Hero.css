@@ -1,12 +1,22 @@
 .lists li {
-    @apply m-2 cursor-pointer hover:bg-amber-400 text-slate-100 p-4 mb-10 rounded-md
+    @apply m-2 cursor-pointer hover:bg-amber-400 mb-10 p-2 rounded-md
 }
 .control {
     @apply border w-[50px] h-[50px] rounded-full hover:bg-slate-400 z-10 font-light opacity-20 hover:opacity-100
 }
 #mobileList {
-    @apply md:hidden text-left
+    @apply flex flex-col text-left 
 }
 .list {
-    @apply m-4 hover:bg-amber-400 text-slate-100 w-[100px] p-4 mb-10 rounded-md flex justify-center items-center text-justify 
+    @apply  hover:bg-amber-400 mb-5  rounded-md  flex items-center cursor-pointer p-2 w-auto mx-2
+}
+.pi {
+    @apply mr-5 px-2
+}
+.header {
+    transition: .3s ease-in;
+    @apply flex flex-row justify-between items-center h-16 pt-8
+}
+.header-bg {
+    @apply bg-slate-100 text-slate-900
 }

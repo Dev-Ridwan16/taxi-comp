@@ -1,0 +1,10 @@
+.offers {
+    @apply bg-slate-50 shadow-xl rounded-lg my-5  mx-10  flex flex-col items-center text-center px-4 py-16 md:mx-0 md:my-0
+    /* @apply bg-slate-100 shadow-xl w-[600px] rounded-lg mx-5 */
+}
+.offer-header {
+    @apply text-gray-900 text-xl my-8 font-medium
+}
+.offer-text {
+    @apply text-gray-600 font-normal text-base
+}

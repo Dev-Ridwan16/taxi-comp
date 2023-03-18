@@ -1,0 +1,21 @@
+.incredible {
+    @apply flex flex-col justify-center items-center w-[140px] my-10
+}
+.icons {
+    @apply text-[80px] mb-4 
+}
+.incredible-text {
+    @apply text-lg font-medium
+}
+.slidecol {
+    @apply overflow-hidden px-10 rounded-xl flex flex-col justify-center items-center
+}
+.quote-div {
+    @apply flex justify-end items-end
+}
+.quote-icon {
+    @apply text-neutral-600 text-[70px] my-5 hidden
+}
+.review {
+    @apply text-base leading-7 text-center text-neutral-300
+}

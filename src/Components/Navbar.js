@@ -6,98 +6,83 @@ import { ImBlogger } from "react-icons/im"
 import Logo from "../assets/taxi-logo.png"
 import "./Styles/Hero.css"
 const Navbar = () => {
-  const [nav, setNav] = useState(0)
-  const [scrollPosition, setScrollPosition] = useState(0)
+  const [nav, setNav] = useState(true)
+  const [color, setcolor] = useState(false)
+
+  const changeColor = () => {
+    if (window.scrollY >= 200) {
+      // console.log("90")
+      setcolor(true)
+    } else {
+      setcolor(false)
+    }
+  }
+
+  window.addEventListener("scroll", changeColor)
 
   const handleNav = () => {
     setNav(!nav)
   }
-  const handleScroll = () => {
-    const position = window.pageYOffset
-    setScrollPosition(position)
-    // alert(position)
-  }
-
-  useEffect(() => {
-    window.addEventListener("scroll", handleScroll, { passive: true })
-
-    return () => {
-      window.removeEventListener("scroll", handleScroll)
-    }
-  }, [])
   return (
-    <div className="fixed z-30 w-[100%] h-16 mx-auto left-0 right-0">
-      <div className="flex flex-row justify-between items-center">
+    <div className="fixed top-0 z-30 w-[100%] h-16 mx-auto">
+      <div className={color ? "header header-bg" : "header"}>
         <img
           src={Logo}
           alt="Logo"
           className="w-[200px] -mt-[15px]"
         />
-        <ul className="hidden md:flex lists">
-          <li>Home</li>
-          <li>About</li>
-          <li>Service</li>
-          <li>Reviews</li>
-          <li>Blogs</li>
-          <li>Contacts</li>
+        <ul className="hidden lg:flex lists">
+          <li className="navs">Home</li>
+          <li className="navs">About</li>
+          <li className="navs">Service</li>
+          <li className="navs">Reviews</li>
+          <li className="navs">Blogs</li>
+          <li className="navs">Contacts</li>
+          <li className="bg-amber-400 text-slate-900 rounded-md">
+            <button>Book a Taxi</button>
+          </li>
         </ul>
         <div
           onClick={handleNav}
-          className="block md:hidden"
+          className="block -mt-10 lg:hidden"
         >
           {!nav ? <AiOutlineClose size={20} /> : <AiOutlineMenu size={20} />}
         </div>
-        <ul
+        <div
           className={
             !nav
-              ? "fixed flex flex-col bg-slate-500 text-black left-0 top-14 w-[100%] z-10 text-start h-auto ease-in-out duration-500"
-              : "fixed top-[-100%] ease-in-out duration-1000"
+              ? "fixed left-0 top-0 w-[60%] bg-[#2b2a2a] h-full border-r border-r-gray-800 ease-in-out duration-500"
+              : // ? "fixed flex flex-col bg-[#2b2a2a] text-white left-0 top-0 w-[30%] z-10 h-full ease-in-out duration-500"
+                "fixed left-[-100%] h-full ease-in-out duration-1000"
           }
           id="mobileList"
         >
-          <li className="list flex justify-center items-center">
-            {/* <AiTwotoneHome
-              size={15}
-              //   className="mr-5 "
-            /> */}
-            Home
-          </li>
-          <li className="list">
-            {/* <FcAbout
-              size={15}
-              //   className="mr-5 "
-            />{" "} */}
-            About
-          </li>
-          <li className="list">
-            {/* <MdOutlineHomeRepairService
-              size={15}
-              //   className="mr-5 "
-            />{" "} */}
-            Service
-          </li>
-          <li className="list">
-            {/* <MdOutlineRateReview
-              size={15}
-              //   className="mr-5 "
-            />{" "} */}
-            Reviews
-          </li>
-          <li className="list">
-            {/* <ImBlogger
-              size={15}
-              //   className="mr-10 "
-            />{" "} */}
-            Blogs
-          </li>
-          <li className="list">
-            {/* <FcContacts
-              size={15}
-              //   className="mr-5 "
-            />{" "} */}
-            Contacts
-          </li>
-        </ul>
+          <img
+            src={Logo}
+            alt="Logo"
+            className="w-[200px] block lg:hidden"
+          />
+          <ul id="mobileList">
+            <li className="list">
+              <i className="pi pi-home"></i> Home
+            </li>
+            <li className="list">
+              <i className="pi pi-info-circle"></i> About
+            </li>
+            <li className="list">
+              <i className="pi pi-wrench"></i> Service
+            </li>
+            <li className="list">
+              <i className="pi pi-comment"></i> Reviews
+            </li>
+            <li className="list">
+              <i className="pi pi-megaphone"></i> Blogs
+            </li>
+            <li className="list">
+              <i className="pi pi-users"></i> Contacts
+            </li>
+          </ul>
+        </div>
       </div>
     </div>
   )

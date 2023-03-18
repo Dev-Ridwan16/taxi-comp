@@ -42,3 +42,11 @@
   transition: opacity 1s ease-in-out;
   transform: translateX(0%);
 } */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300&family=Poppins:wght@300;400&family=Quicksand:wght@500&display=swap');
+
+body {
+  font-family: 'Poppins', sans-serif;
+}
+.wrapper {
+  transition: 1s;
+}

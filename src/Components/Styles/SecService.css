@@ -1,0 +1,12 @@
+.secLists {
+    @apply flex flex-col items-center py-5 my-5 w-[100%] md:w-[800px] md:mx-2 lg:w-[1000px] md:py-8 xl:p-10 xl:mt-10 bg-amber-400 rounded-lg 
+}
+.secLists p {
+    @apply text-gray-900 font-medium text-[20px] mt-5 md:font-medium md:text-base
+}
+.secLists h1 {
+    @apply text-gray-900 text-xl mt-1 font-bold md:text-xl lg:text-2xl
+}
+.secLists i {
+    @apply text-[70px] md:text-[35px] xl:text-8xl
+}
