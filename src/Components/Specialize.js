@@ -5,15 +5,15 @@ import { TbPhoneCall } from "react-icons/tb"
 
 const Specialize = () => {
   return (
-    <div className="flex flex-col justify-center items-center max-w-[90%] mx-auto md:flex-row md:justify-between md:max-w[100%] xl:max-w-[1200px] md:mx-auto">
+    <div className="flex flex-col justify-center items-center max-w-[100%] md:flex-row md:justify-between md:w[100%] xl:max-w-[1200px] md:px-5">
       <div>
         <img
           src={FirstChoiceImage}
           alt="Image"
-          className="rounded-lg"
+          className="rounded-lg md:mx-2"
         />
       </div>
-      <div className="flex flex-col text-center justify-center items-center max-w-[500px] mx-auto md:justify-between md:items-start md:max-w-[500px] md:mx-auto md:text-left">
+      <div className="flex flex-col text-center justify-center items-center w-[500px] mx-auto md:items-start md:w-[500px] md:mx-10 md:text-left">
         <h1 className="text-2xl font-bold my-10 md:text-3xl xl:text-5xl">
           Your first choice for traveling anywhere
         </h1>
@@ -22,15 +22,14 @@ const Specialize = () => {
           arcu est. Duis convallis nisl eu vestibulum pellentesqe. Aenean non
           dui sapien. Mauris ornare.
         </p>
-        <div className="bg-gray-100 rounded-lg my-5 md:flex md:items-center">
-          <p className="font-bold text-gray-800 text-1xl py-10 md:px-5 md:text-lg md:font-base">
+        <div className="bg-gray-100 rounded-lg flex flex-col justify-center items-center my-5 md:flex-row md:items-center">
+          <p className="font-bold text-gray-800 text-1xl py-3 md:px-3 md:text-[16px] md:font-medium">
             We are specialized in providing a high quality service
           </p>
-          <img
-            src={VideoImg}
-            alt="Video"
-            className="max-w-full rounded-lg md:rounded-l-none"
-          />
+          <video
+            src="https://www.youtube.com/embed/XHOmBV4js_E?feature=oembed&start&end&wmode=opaque&loop=0&controls=1&mute=0&rel=0&modestbranding=0&autoplay=1"
+            className="w-full rounded-lg md:rounded-l-none"
+          ></video>
         </div>
         <div className="flex flex-col justify-center items-center my-10 md:flex-row">
           <TbPhoneCall size={80} />

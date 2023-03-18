@@ -51,9 +51,9 @@ const Navbar = () => {
         <div
           className={
             !nav
-              ? "fixed left-0 top-0 w-[60%] bg-[#2b2a2a] h-full border-r border-r-gray-800 ease-in-out duration-500"
+              ? "fixed left-0 top-0 w-[60%] h-screen bg-[#2b2a2a] border-r border-r-gray-800 ease-in-out duration-500"
               : // ? "fixed flex flex-col bg-[#2b2a2a] text-white left-0 top-0 w-[30%] z-10 h-full ease-in-out duration-500"
-                "fixed left-[-100%] h-full ease-in-out duration-1000"
+                "fixed left-[-100%] ease-in-out duration-1000"
           }
           id="mobileList"
         >

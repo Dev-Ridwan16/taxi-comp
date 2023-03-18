@@ -5,10 +5,10 @@
     @apply border w-[50px] h-[50px] rounded-full hover:bg-slate-400 z-10 font-light opacity-20 hover:opacity-100
 }
 #mobileList {
-    @apply flex flex-col text-left 
+    @apply flex flex-col text-left xl:hidden
 }
 .list {
-    @apply  hover:bg-amber-400 mb-5  rounded-md  flex items-center cursor-pointer p-2 w-auto mx-2
+    @apply  hover:bg-amber-400 mb-5 text-slate-100  rounded-md  flex items-center cursor-pointer p-2 w-auto mx-2
 }
 .pi {
     @apply mr-5 px-2

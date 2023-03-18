@@ -6,7 +6,7 @@ import "./Styles/Offer.css"
 
 const Offer = () => {
   return (
-    <div className="bg-gray-100 mt-52 h-auto">
+    <div className="bg-gray-100 h-auto">
       <div className="flext flex-col justify-center items-center mx-auto text-center py-16">
         <p className=" font-normal text-xl my-5 xl:font-medium">
           Our Best Cars
